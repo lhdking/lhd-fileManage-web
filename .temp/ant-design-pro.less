@@ -1,0 +1,294 @@
+@import "../node_modules/antd/lib/style/themes/default.less";
+
+
+@nav-header-height: 64px;
+
+.antd-pro-components-sider-menu-base-menu-view-logo {
+  height: @nav-header-height;
+  position: relative;
+  line-height: @nav-header-height;
+  padding-left: (@menu-collapsed-width - 32px) / 2;
+  transition: all 0.3s;
+  background: #002140;
+  overflow: hidden;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+  }
+  h1 {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 0 0 12px;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+}
+
+.antd-pro-components-sider-menu-base-menu-view-sider {
+  min-height: 100vh;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  position: relative;
+  z-index: 10;
+  &.antd-pro-components-sider-menu-base-menu-view-fixSiderbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    .ant-menu-root {
+      overflow-y: auto;
+      height: ~'calc(100vh - @{nav-header-height})';
+    }
+  }
+  &.antd-pro-components-sider-menu-base-menu-view-light {
+    box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+    background-color: white;
+    .antd-pro-components-sider-menu-base-menu-view-logo {
+      background: white;
+      box-shadow: 1px 1px 0 0 @border-color-split;
+      h1 {
+        color: @primary-color;
+      }
+    }
+    .ant-menu-light {
+      border-right-color: transparent;
+    }
+  }
+}
+
+.antd-pro-components-sider-menu-base-menu-view-icon {
+  width: 14px;
+  margin-right: 10px;
+}
+  .drawer .drawer-content {
+    background: #001529;
+  }
+  .ant-menu-inline-collapsed {
+    & > .ant-menu-item .sider-menu-item-img + span,
+    &
+      > .ant-menu-item-group
+      > .ant-menu-item-group-list
+      > .ant-menu-item
+      .sider-menu-item-img
+      + span,
+    & > .ant-menu-submenu > .ant-menu-submenu-title .sider-menu-item-img + span {
+      max-width: 0;
+      display: inline-block;
+      opacity: 0;
+    }
+  }
+  .ant-menu-item .sider-menu-item-img + span,
+  .ant-menu-submenu-title .sider-menu-item-img + span {
+    transition: opacity 0.3s @ease-in-out, width 0.3s @ease-in-out;
+    opacity: 1;
+  }
+
+.antd-pro-layout-index-head {
+    width: 100%;
+    transition: background 0.3s, width 0.2s;
+    height: 64px;
+    padding: 0 12px 0 0;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    position: relative;
+      .ant-menu-submenu.ant-menu-submenu-horizontal {
+        height: 100%;
+        padding-top: 0px;
+        .ant-menu-submenu-title {
+          height: 100%;
+        }
+      }
+.antd-pro-layout-index-logo {
+    width: 165px;
+    height: 64px;
+    position: relative;
+    line-height: 64px;
+    transition: all 0.3s;
+    overflow: hidden;
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        height: 32px;
+    }
+    h1 {
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        margin: 0 0 0 12px;
+        font-weight: 400;
+    }
+}
+
+&.antd-pro-layout-index-light {
+    background-color: #fff;
+    }
+    .antd-pro-layout-index-main {
+    display: flex;
+    height: 64px;
+    padding-left: 24px;
+    &.antd-pro-layout-index-wide {
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 4px;
+    }
+    .antd-pro-layout-index-left {
+        flex: 1;
+        display: flex;
+    }
+    .antd-pro-layout-index-right {
+        width: 324px;
+    }
+    }
+  }
+
+.antd-pro-layout-login-layout-globalFooter {
+  padding: 0 16px;
+  margin: 48px 0 24px 0;
+  text-align: center;
+
+  .antd-pro-layout-login-layout-links {
+    margin-bottom: 8px;
+    a {
+      color: @text-color-secondary;
+      transition: all 0.3s;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      &:hover {
+        color: @text-color;
+      }
+    }
+  }
+
+  .antd-pro-layout-login-layout-copyright {
+    color: @text-color-secondary;
+    font-size: @font-size-base;
+  }
+}
+
+
+.antd-pro-layout-login-layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: @layout-body-background;
+}
+
+.antd-pro-layout-login-layout-content {
+  padding: 32px 0;
+  flex: 1;
+}
+.antd-pro-layout-login-layout-childrenContent{
+	padding: 30px 0;
+}
+@media (min-width: @screen-md-min) {
+  .antd-pro-layout-login-layout-container {
+    background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: 100%;
+  }
+
+  .antd-pro-layout-login-layout-content {
+    padding: 100px 0 24px 0;
+  }
+}
+.antd-pro-layout-login-layout-top {
+  text-align: center;
+}
+.antd-pro-layout-login-layout-header {
+  height: 44px;
+  line-height: 44px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.antd-pro-layout-login-layout-logo {
+  height: 44px;
+  vertical-align: top;
+  margin-right: 16px;
+}
+
+.antd-pro-layout-login-layout-title {
+  font-size: 33px;
+  color: @heading-color;
+  font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+
+.antd-pro-layout-login-layout-desc {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+.antd-pro-pages-file-manage-file-catalog-info-tableoperations {
+  margin-bottom: 16px;
+}
+
+.antd-pro-pages-file-manage-file-catalog-info-tableoperations > button {
+  margin-right: 8px;
+}
+.antd-pro-pages-file-manage-file-info-tableoperations {
+  margin-bottom: 16px;
+}
+
+.antd-pro-pages-file-manage-file-info-tableoperations > button {
+  margin-right: 8px;
+}
+
+
+
+.antd-pro-pages-login-main {
+  width: 368px;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+  
+  .antd-pro-pages-login-icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .antd-pro-pages-login-other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .antd-pro-pages-login-register {
+      float: right;
+    }
+  }
+}
+
+.antd-pro-pages-login-loginform {
+  max-width: 300px;
+}
+.antd-pro-pages-login-loginformforgot {
+  float: right;
+}
+.antd-pro-pages-login-loginformbutton {
+  width: 100%;
+}
+
+.antd-pro-pages-system-set-dict-info-tableoperations {
+  margin-bottom: 16px;
+}
+
+.antd-pro-pages-system-set-dict-info-tableoperations > button {
+  margin-right: 8px;
+}

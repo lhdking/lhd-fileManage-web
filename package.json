@@ -1,0 +1,36 @@
+{
+  "name": "hlht-tools-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env APP_TYPE=site umi dev",
+    "start:no-mock": "cross-env MOCK=none umi dev",
+    "build": "umi build",
+    "site": "npm run presite && cross-env APP_TYPE=site npm run build && firebase deploy",
+    "analyze": "cross-env ANALYZE=1 umi build"
+  },
+  "author": "lhd",
+  "license": "ISC",
+  "dependencies": {
+    "@antv/data-set": "^0.9.5",
+    "@antv/g6": "^2.1.4",
+    "@babel/runtime": "^7.0.0",
+    "@types/react-dom": "^16.0.6",
+    "ant-design-pro": "2.1.0",
+    "antd-pro-merge-less": "^0.0.9",
+    "antd-pro-theme-webpack-plugin": "^1.1.8",
+    "react-dom": "^16.4.2",
+    "bizcharts": "^3.1.10",
+    "bizcharts-plugin-slider": "^2.0.3",
+    "classnames": "^2.2.6",
+    "cross-env": "^5.1.1",
+    "cross-port-killer": "^1.0.1",
+    "qs": "^6.5.2",
+    "umi": "^2.2.1",
+    "umi-plugin-react": "^1.2.0",
+    "xml-formatter": "1.0.1",
+		"numeral": "^2.0.6"
+  }
+}
