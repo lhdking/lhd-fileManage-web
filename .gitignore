@@ -2,5 +2,6 @@
 node_modules/
 #后缀是lnk 的文件忽略
 *.lnk
-#.umi下的文件忽略
+#.umi  .umi-production下的文件忽略
 .umi/
+.umi-production/
